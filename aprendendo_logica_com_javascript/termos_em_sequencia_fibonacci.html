@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha(){document.write("<br><br>")}
+	function mostra(texto){document.write(texto), pulaLinha()}
+
+  
+
+  var termoDesejado = parseInt(prompt("Quantos termos em sequência você deseja?."));
+  var numeroOuro = 1.618034
+
+
+  mostra("Aqui estão os termos:");
+
+  var partidaSequencia = 1
+
+while(partidaSequencia <= termoDesejado){
+
+     mostra(Math.round((((numeroOuro)**(partidaSequencia ) ) - (( 1 - numeroOuro)**(partidaSequencia)))/Math.sqrt(5)))
+     partidaSequencia = partidaSequencia + 1
+
+}
+
+
+// progrma escrito por @profmatrb
+</script>
+
+

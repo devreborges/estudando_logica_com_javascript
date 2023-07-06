@@ -1,0 +1,65 @@
+<canvas width="600" height="400"></canvas>
+<script >
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	 function quadrado(x, y, largura, altura, cor) {
+	 	pincel.fillStyle = cor;
+		pincel.fillRect (x, y, largura, altura);
+		pincel.fillStroke = 'black';
+		pincel.strokeRect (x, y, largura, altura);
+
+	 }
+
+	 function linhaQuadrados(ordenada, cor) {
+
+	 	for(zero = 0; zero < 600; zero = zero + 50) {
+ 		quadrado(zero, ordenada, 50, 50, cor)
+ 		} 
+ 	}
+ 	 
+ 	 linhaQuadrados(0, 'green');
+ 	 linhaQuadrados(50, 'blue');
+ 	 linhaQuadrados(100, 'red');
+
+
+
+
+
+
+
+
+
+
+	 
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+</script>
+
+	
+
+
+
+	
+
+
+	

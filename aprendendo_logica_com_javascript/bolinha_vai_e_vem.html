@@ -1,0 +1,43 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  var tela = document.querySelector('canvas');
+  var pincel = tela.getContext('2d');
+  pincel.fillStyle = 'lightgray';
+  pincel.fillRect(0, 0, 600, 400);
+
+  function fazBolinha(x) {
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.arc(300, 200, x, 0, 2 * 3.14);
+    pincel.fill();
+  }
+
+  function limpaTela() {
+    pincel.clearRect(0, 0, 600, 400);
+  }
+
+  let x = 10
+  let k = 1
+
+ function bolinhaVaiBolinhaVem(){ 
+ 			limpaTela();
+
+ 			if(x > 200){
+ 				k = -1
+ 			} else if(x < 2){
+
+ 				k = 1
+ 			}
+ 		fazBolinha(x);
+ 		
+ 		x = x + k	
+ }
+
+
+setInterval(bolinhaVaiBolinhaVem, 1);
+
+
+
+
+</script>

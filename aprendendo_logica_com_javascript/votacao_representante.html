@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+
+<script> 
+function mostra(texto){document.write(texto);
+pulaLinha()}
+function pulaLinha(){document.write("<br><br>")}
+
+alert("Vamos iniciar a votação!");
+
+var votosAndre = 0
+var votosPedro = 0
+var votosClara = 0
+var contador = 0
+
+
+ while(contador <= 99){
+
+ 	alert("Atenção ao número de cada representante");
+
+		votos = parseInt(prompt("Vote:  André = 1, Pedro = 2, Ana Clara = 3"));
+
+		
+		if (votos == 1){ votosAndre = votosAndre +1 }
+
+ 		if (votos == 2){votosPedro = votosPedro +1}
+
+ 		if (votos == 3){votosClara = votosClara +1 }
+
+
+   	 	alert("OBRIGADO POR PARTICIPAR!");
+
+   	 		contador = contador + 1
+
+   	 if (votos == 80213611){break}
+		
+
+	}
+
+
+ 
+mostra("Andre obteve " + votosAndre +" votos.");
+mostra("Pedro obteve " + votosPedro+" votos.");
+mostra("Ana Clara obteve " + votosClara +" votos.");
+
+
+</script>

@@ -1,0 +1,86 @@
+<canvas width="1920" height="1080"></canvas>
+
+<meta charset="utf-8">
+
+<script>
+  var tela = document.querySelector('canvas');
+  var pincel = tela.getContext('2d');
+  pincel.fillStyle = 'white';
+  pincel.fillRect(0, 0, 1920, 1080);
+
+
+  function limpaTela() {
+    pincel.clearRect(0, 0, 1920, 1080);
+  }
+
+  function desenhaTexto(texto, x, y, fonte) {
+    pincel.fillStyle = 'black';
+    pincel.font = fonte;
+    pincel.beginPath();
+    pincel.fillText(texto, x, y);
+    
+  }
+
+  let x = 20
+  let k = 1
+
+  function textoAndando() { 
+      limpaTela();
+
+      if(x > 500) {
+
+        k = -1
+      } else if(x < - 200) {
+
+      k = 1 
+
+      }
+
+      desenhaTexto('Sai  logo do bronze noob', 50 - x , 30, '15px arial');
+      desenhaTexto('Sai  logo do bronze noob', x + 30, 80, '55px arial');
+      desenhaTexto('Sai  logo do bronze noob', 80 - x, 120,'60px arial');
+      desenhaTexto('Sai  logo do bronze noob', x + 100, 130,'30px arial');
+      desenhaTexto('Sai  logo do bronze noob', 300 - x, 150,'15px arial');
+
+      desenhaTexto('Sai  logo do bronze noob', 90 - x , 200, '15px arial');
+      desenhaTexto('Sai  logo do bronze noob', x + 700, 220, '55px arial');
+      desenhaTexto('Sai  logo do bronze noob', 190 - x, 270,'60px arial');
+      desenhaTexto('Sai  logo do bronze noob', x + 100, 290,'30px arial');
+      desenhaTexto('Sai  logo do bronze noob', 600 - x, 330,'15px arial');
+
+      desenhaTexto('Sai  logo do bronze noob', 90 - x , 400, '15px arial');
+      desenhaTexto('Sai  logo do bronze noob', x + 700, 450, '55px arial');
+      desenhaTexto('Sai  logo do bronze noob', 190 - x, 500,'60px arial');
+      desenhaTexto('Sai  logo do bronze noob', x + 100, 560,'30px arial');
+      desenhaTexto('Sai  logo do bronze noob', 600 - x, 600,'15px arial');
+
+      x = x + k
+  }
+
+setInterval(textoAndando, 5);
+
+/*
+  let x = 10
+  let k = 1
+
+ function bolinhaVaiBolinhaVem(){ 
+ 			limpaTela();
+
+ 			if(x > 200){
+ 				k = -1
+ 			} else if(x < 2){
+
+ 				k = 1
+ 			}
+ 		fazBolinha(x);
+ 		
+ 		x = x + k	
+ }
+
+
+setInterval(bolinhaVaiBolinhaVem, 1);
+
+*/
+
+
+</script>

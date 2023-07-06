@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+Estou pensando em um número de 1 até 10. 
+<br> 
+
+Será que você consegue advinhar o número que estou pensando?
+<br>
+Digite aqui a sua tentativa e clique no botão para tentar advinhar.
+<input type="" name="">
+
+<button>Clique aqui</button>
+
+<script>
+function mostra(texto){document.write(texto)} //função para escrever
+function pulaLinha(){document.write("<br><br>")} //função para pular linha
+
+var segredo = (Math.round( Math.random()*10))
+var input = document.querySelector("input") //variável para pegar o valor descrito na caixinha do input no html
+input.focus(); // comando para mandar a linha de escrever na caixinha
+
+
+ 
+ function compare() {
+	 	var input = document.querySelector("input")
+
+		if(input.value == segredo){ 
+
+		alert("Parabéns, ótimo chute! Você acertou! Eu estava pensando no número segredo". + segredo ".");
+		segredo = (Math.round( Math.random()*10));
+
+		} else {
+
+		alert("Infelizmente você errou, não era nesse número que eu estava pensando no número " + segredo); 
+		segredo = (Math.round( Math.random()*10));
+					
+		}
+
+		input.value ="";
+		input.focus();
+
+	}
+
+
+ 		var button = document.querySelector("button") //variável para comparar o que está escrito na caixinha com o número random
+ 			button.onclick = compare; //comparar ao apertar o botão
+
+</script>

@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha(){document.write("<br><br>")}
+	function mostra(texto){document.write(texto), pulaLinha()}
+
+  
+
+  var termoDesejado = parseInt(prompt("Digite o termo que deseja descobrir da sequência de fibonacci."));
+  var numeroOuro = 1.618034
+
+
+  mostra("O valor do termo de posição " + termoDesejado + " é: ");
+
+ mostra(Math.round((((numeroOuro)**(termoDesejado) ) - (( 1 - numeroOuro)**(termoDesejado)))/Math.sqrt(5)))
+// progrma escrito por @profmatrb
+</script>
+
+
